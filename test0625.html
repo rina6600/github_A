@@ -10,25 +10,301 @@
     <style media="screen">
         /* 画面に対するスタイル */
 
+        div {
+            width: 320px;
+            height: auto;
+            float: left;
+            margin: 3px;
+            position: relative;
+            border: 1px solid #ddd;
+        }
+
         img {
             width: 100%;
             height: auto;
         }
 
-        .blur {
+        /* ・ーーーー画面をぼかすーーーー・ */
+
+        .blurA img {
+            filter: none;
+            /* 画像をぼかす */
+        }
+
+        .blurB img {
             filter: blur(5px);
             /* 画像をぼかす */
         }
+
+        .blurC img {
+            filter: blur(10px);
+            /* 画像をぼかす */
+        }
+
+        .blurD img {
+            filter: blur(30px);
+            /* 画像をぼかす */
+        }
+
+        /* ・ーーーーーーーーーーーー・ */
+
+        /* ・ーーーー画面を明るくするーーーー・ */
+
+        .brightnessA img {
+            filter: brightness(100%);
+            /* 画像を明るく */
+        }
+
+        .brightnessB img {
+            filter: brightness(10%);
+            /* 画像を明るく */
+        }
+
+        .brightnessC img {
+            filter: brightness(50%);
+            /* 画像を明るく */
+        }
+
+        .brightnessD img {
+            filter: brightness(200%);
+            /* 画像を明るく */
+        }
+
+        /* ・ーーーーーーーーーーーー・ */
+
+        /* ・ーーーー画面のコントラストを変えるーーーー・ */
+
+        .contrastA img {
+            filter: contrast(100%);
+            /* 画像を明るく */
+        }
+
+        .contrastB img {
+            filter: contrast(0%);
+            /* 画像を明るく */
+        }
+
+        .contrastC img {
+            filter: contrast(50%);
+            /* 画像を明るく */
+        }
+
+        .contrastD img {
+            filter: contrast(200%);
+            /* 画像を明るく */
+        }
+
+        /* ・ーーーーーーーーーーーー・ */
+
+        /* ・ーーーードロップシャドウをつけるーーーー・ */
+
+        .drop-shadowA img {
+            filter: drop-shadow(0px 0px 0px);
+            /* 画像を明るく */
+        }
+
+        .drop-shadowB img {
+            filter: drop-shadow(10px 0px 0px red);
+            /* 画像を明るく */
+        }
+
+        .drop-shadowC img {
+            filter: drop-shadow(10px 10px 0px blue);
+            /* 画像を明るく */
+        }
+
+        .drop-shadowD img {
+            filter: drop-shadow(10px 10px 10px white);
+            /* 画像を明るく */
+        }
+
+        /* ・ーーーーーーーーーーーー・ */
+
+        /* ・ーーーーグレースケールにするーーーー・ */
+
+        .grayscaleA img {
+            filter: grayscale(0%);
+            /* 画像を明るく */
+        }
+
+        .grayscaleB img {
+            filter: grayscale(50%);
+            /* 画像を明るく */
+        }
+
+        .grayscaleC img {
+            filter: grayscale(100%);
+            /* 画像を明るく */
+        }
+
+        .grayscaleD img {
+            filter: grayscale(200%);
+            /* 画像を明るく */
+        }
+
+        /* ・ーーーーーーーーーーーー・ */
+
+        /* ・ーーーー色相を変えるーーーー・ */
+        .hue-rotateA img {
+            filter: hue-rotate(0deg);
+            /* 画像を明るく */
+        }
+
+        .hue-rotateB img {
+            filter: hue-rotate(90deg);
+            /* 画像を明るく */
+        }
+
+        .hue-rotateC img {
+            filter: hue-rotate(180deg);
+            /* 画像を明るく */
+        }
+
+        .hue-rotateD img {
+            filter: hue-rotate(270deg);
+            /* 画像を明るく */
+        }
+
+        /* ・ーーーーーーーーーーーー・ */
     </style>
 </head>
 
 <body>
-    <p>オリジナル画像</p><br>
-    <img class="orijinaru" src="./image/test_bg.png" alt="綺麗な背景画像"><br><br>
+    <div class="blurA">
+        <img src="./image/test_bg.png" alt="綺麗な背景画像"><br>
+        <p>オリジナル画像</p><br>
+    </div>
+
+    <div class="blurB">
+        <img src="./image/test_bg.png" alt="綺麗な背景画像"><br>
+        <p>ガウシアンぼかし : blur(5px)</p><br>
+    </div>
+
+    <div class="blurC">
+        <img src="./image/test_bg.png" alt="綺麗な背景画像"><br>
+        <p>ガウシアンぼかし : blur(10px)</p><br>
+    </div>
+
+    <div class="blurD">
+        <img src="./image/test_bg.png" alt="綺麗な背景画像"><br>
+        <p>ガウシアンぼかし : blur(30px)</p><br>
+    </div>
 
 
-    <p>ガウシアンぼかし : blur(30px)</p><br>
-    <img class="blur" src="./image/test_bg.png" alt="綺麗な背景画像"><br>
+    <div class="brightnessA">
+        <img src="./image/test_bg.png" alt="綺麗な背景画像"><br>
+        <p>オリジナル画像 <br>
+            明るさ : brightness(100%)
+        </p>
+    </div>
+
+    <div class="brightnessB">
+        <img src="./image/test_bg.png" alt="綺麗な背景画像"><br>
+        <p>明るさ : brightness(10%)</p><br>
+    </div>
+
+    <div class="brightnessC">
+        <img src="./image/test_bg.png" alt="綺麗な背景画像"><br>
+        <p>明るさ : brightness(50%)</p><br>
+    </div>
+
+    <div class="brightnessD">
+        <img src="./image/test_bg.png" alt="綺麗な背景画像"><br>
+        <p>明るさ : brightness(200%)</p><br>
+    </div>
+
+
+    <div class="contrastA">
+        <img src="./image/test_bg.png" alt="綺麗な背景画像"><br>
+        <p>オリジナル画像 <br>
+            コントラスト : contrast(100%)
+        </p>
+    </div>
+
+    <div class="contrastB">
+        <img src="./image/test_bg.png" alt="綺麗な背景画像"><br>
+        <p>コントラスト : contrast(0%)</p><br>
+    </div>
+
+    <div class="contrastC">
+        <img src="./image/test_bg.png" alt="綺麗な背景画像"><br>
+        <p>コントラスト : contrast(50%)</p><br>
+    </div>
+
+    <div class="contrastD">
+        <img src="./image/test_bg.png" alt="綺麗な背景画像"><br>
+        <p>コントラスト : contrast(200%)</p><br>
+    </div>
+
+
+    <div class="drop-shadowA">
+        <img src="./image/test_bg.png" alt="綺麗な背景画像"><br>
+        <p>オリジナル画像 <br>
+            ドロップシャドウ : drop-shadow(0px 0px 0px)
+        </p>
+    </div>
+
+    <div class="drop-shadowB">
+        <img src="./image/test_bg.png" alt="綺麗な背景画像"><br>
+        <p>ドロップシャドウ : drop-shadow(10px 0px 0px red)</p><br>
+    </div>
+
+    <div class="drop-shadowC">
+        <img src="./image/test_bg.png" alt="綺麗な背景画像"><br>
+        <p>ドロップシャドウ : drop-shadow(10px 10px 0px blue)</p><br>
+    </div>
+
+    <div class="drop-shadowD">
+        <img src="./image/test_bg.png" alt="綺麗な背景画像"><br>
+        <p>ドロップシャドウ : drop-shadow(10px 10px 10px white)</p><br>
+    </div>
+
+
+    <div class="grayscaleA">
+        <img src="./image/test_bg.png" alt="綺麗な背景画像"><br>
+        <p>オリジナル画像 <br>
+            グレースケール : grayscale(0%)
+        </p>
+    </div>
+
+    <div class="grayscaleB">
+        <img src="./image/test_bg.png" alt="綺麗な背景画像"><br>
+        <p>グレースケール : grayscale(50%)</p><br>
+    </div>
+
+    <div class="grayscaleC">
+        <img src="./image/test_bg.png" alt="綺麗な背景画像"><br>
+        <p>グレースケール : grayscale(100%)</p><br>
+    </div>
+
+    <div class="grayscaleD">
+        <img src="./image/test_bg.png" alt="綺麗な背景画像"><br>
+        <p>グレースケール : grayscale(200%)</p><br>
+    </div>
+
+
+    <div class="hue-rotateA">
+        <img src="./image/test_bg.png" alt="綺麗な背景画像"><br>
+        <p>オリジナル画像 <br>
+            色相 : hue-rotate(0deg)
+        </p>
+    </div>
+
+    <div class="hue-rotateB">
+        <img src="./image/test_bg.png" alt="綺麗な背景画像"><br>
+        <p>色相 : hue-rotate(90deg)</p><br>
+    </div>
+
+    <div class="hue-rotateC">
+        <img src="./image/test_bg.png" alt="綺麗な背景画像"><br>
+        <p>色相 : hue-rotate(180%)</p><br>
+    </div>
+
+    <div class="hue-rotateD">
+        <img src="./image/test_bg.png" alt="綺麗な背景画像"><br>
+        <p>色相 : hue-rotate(270%)</p><br>
+    </div>
+
 </body>
 
 </html>
